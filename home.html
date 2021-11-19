@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+   /* створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б*/
+    function rectangle (a,b) {
+        return  a * b;
+            }
+let calc = rectangle(10, 20)
+    console.log(calc)
+
+   /*створити функцію яка обчислює та повертає площу кола з радіусом r S = πR²*/
+   function  round (p,r) {
+       return  p * r**2;
+         }
+let arearound = round(3.14,5)
+   console.log(arearound)
+   /*- створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r S= 2πRH*/
+
+   function cylinder (p,r,h) {
+      return  2*p*r*h;
+          }
+   let areacylinder = cylinder(3.14,5,10)
+   console.log(areacylinder)
+
+   /*створити функцію яка приймає масив та виводить кожен його елемент*/
+   function arr () {
+       for (const argument of arguments) {
+
+           console.log(argument)}
+   }
+   arr (10,34,36,86,56,45)
+
+  /* - створити функцію яка створює параграф з текстом. Текст задати через аргумент*/
+function  paragraf (Vova) {
+    document.write(`<p>${Vova}</p>`)
+}
+paragraf('Vova super')
+
+   /*- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+       Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)*/
+   function stovp (Vova,size) {
+      document.write(`<ul>`)
+       for (let i = 0; i < size; i++) {
+            document.write(`<li>${Vova}</li>`)
+           }
+   }
+   stovp ('Хацепетівка', 3)
+
+
+   /*- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список*/
+   let arry = [1,'Vova',true]
+   function element (arry1) {
+       document.write(`<ul>`);
+       for (const arrElement of arry) {
+           document.write(`<li>${arrElement}</li>`);
+       }
+       document.write(`</ul>`)
+   }
+   element()
+
+    /*створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.*/
+
+   let user = [
+       {
+           id: 2,
+           name: 'Vova',
+           age: 12
+       }
+       ]
+
+   function user1 (user) {
+
+       for (const item of user) {
+           document.write(`<div>${item.id} - ${item.name} - ${item.age}</div>`)
+       }
+          }
+   user1([])
+
+
+
+
+
+
+</script>
+</body>
+</html>
