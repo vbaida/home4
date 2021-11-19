@@ -57,33 +57,38 @@ paragraf('Vova super')
 
 
    /*- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список*/
-   let arry = [1,'Vova',true]
-   function element (arry1) {
-       document.write(`<ul>`);
+   let anyarry = [1,'Vova',true, 345,'kgvkvjl']
+   function element (arry) {
+       document.write(`<ol>`);
        for (const arrElement of arry) {
            document.write(`<li>${arrElement}</li>`);
        }
-       document.write(`</ul>`)
+       document.write(`</ol>`)
    }
-   element()
+   element(anyarry)
 
     /*створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.*/
 
    let user = [
        {
-           id: 2,
+           id: 3,
            name: 'Vova',
            age: 12
+       },
+       {
+           id:53,
+           name: 'Vitaliy',
+           age: 22
        }
        ]
 
    function user1 (user2) {
 
-       for (const item of user) {
+       for (const item of user2) {
            document.write(`<div>${item.id} - ${item.name} - ${item.age}</div>`)
        }
           }
-   user1([])
+   user1(user)
 
 
 
