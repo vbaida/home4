@@ -13,12 +13,7 @@
 
 
 
-- створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
-- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
-- створити функцію яка заповнює масив рандомними числами
-(цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
-- створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
-- Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].-->
+-->
 
 <script>
   /*  - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)*/
@@ -80,12 +75,76 @@ function number2 (arr) {
 
   /*- створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13*/
 
-let numer = [1,2,10]
-  function sum (numer1){
-    let suma = numer1[0]+numer1[1]+numer1[2]
+  let numbers = [1,2,10]
+ function sumarr (nums) {
+    let result = 0
+      for (const num of nums) {
+          result=result+num;
       }
-document.write(`<h2>Сума чисел масиву: ${su}</h2>`)
+      return result;
+  }
+  document.write(sumarr(numbers))
 
+ /* - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.*/
+
+  let nums = [2,4,6]
+    function arr(numbers) {
+          let result = 0
+        for (const number of numbers) {
+result = result+number;
+        }
+        return result/numbers.length
+    }
+    document.write(arr(nums))
+/* створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);*/
+
+ function numer(arr){
+     let min = arguments[0]
+     let max = arguments[0]
+     for (const item of arguments) {
+         if (item>max) {
+         max=item;}
+         if (item<min){
+             min=item;
+         }
+     }
+     return min;
+ }
+ console.log(numer(25,14,17,89,2,5,89))
+
+  /*- створити функцію яка заповнює масив рандомними числами
+  (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.*/
+  function randomizer(arr) {
+      let arrelement = []
+      for (let i = 0; i < arr; i++) {
+          arrelement.push(Math.round(Math.random()*100));
+          }
+           return arrelement
+           }
+           console.log(randomizer(5))
+
+
+  /*- створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент,
+  який характеризує кінцеве значення діапазону.*/
+
+  function arrrandom(arr,limit) {
+      let element = []
+      for (let i = 0; i < arr; i++) {
+          element.push(Math.round(Math.random()*limit));
+      }
+      return element
+  }
+  console.log(randomizer(5,100))
+  /*- Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].*/
+
+  function item(erey){
+  let newarr = []
+  for (let i = erey.length - 1, ri = 0; i >= 0; i--, ri++) {
+     newarr[ri]=erey[i];
+  }
+  return newarr;
+  }
+  console.log(item([1,2,3]))
 </script>
 </body>
 </html>
